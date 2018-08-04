@@ -1,18 +1,46 @@
 <template>
     <div class='home'>
-        <img src='../assets/logo.png'>
-        <HelloWorld msg='Welcome to Your Vue.js App'/>
+        <p>
+            {{ hash }}
+        </p>
+        <p>
+            <button @click='requestHash'>Request hash</button>
+        </p>
     </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+
+import { mapActions, mapState } from 'vuex';
 
 export default {
+
     name: 'home',
-    components: {
-        HelloWorld
+
+    created () {
+
+        this.fetchHash();
+
+    },
+
+    methods: {
+        ...mapActions( 'hash', [
+            'fetchHash'
+        ] ),
+
+        requestHash () {
+
+            this.fetchHash();
+
+        }
+
+    },
+
+    computed: {
+        ...mapState( 'hash', [
+            'hash'
+        ] )
     }
+
 };
 </script>
