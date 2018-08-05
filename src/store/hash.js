@@ -8,7 +8,6 @@ const mutations = {
     setHash ( state, hash ) {
 
         state.hash = hash;
-        console.dir( state );
 
     }
 };
