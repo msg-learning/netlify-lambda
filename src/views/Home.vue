@@ -4,7 +4,9 @@
             {{ hash }}
         </p>
         <p>
-            <button @click='requestHash'>Request hash</button>
+            <button
+                :disabled='requestInProgress'
+                @click='requestHash'>Request hash</button>
         </p>
     </div>
 </template>
@@ -19,18 +21,24 @@ export default {
 
     created () {
 
-        this.fetchHash();
+        this.requestHash();
 
     },
+
+    data: () => ( {
+        requestInProgress: false
+    } ),
 
     methods: {
         ...mapActions( 'hash', [
             'fetchHash'
         ] ),
 
-        requestHash () {
+        async requestHash () {
 
-            this.fetchHash();
+            this.requestInProgress = true;
+            await this.fetchHash();
+            this.requestInProgress = false;
 
         }
 
