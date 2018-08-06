@@ -17,6 +17,7 @@ module.exports = {
     ],
     semi: [ 'error', 'always' ],
     'padded-blocks': 'off',
+    'no-return-assign': 'off',
     'indent': [ 'error', 4 ],
     'vue/html-indent': [
       'error',
@@ -28,7 +29,7 @@ module.exports = {
     ],
     'vue/html-quotes': [
       'error',
-      'single'
+      'double'
     ]
   },
   parserOptions: {
