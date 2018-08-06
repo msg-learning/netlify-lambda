@@ -20,9 +20,9 @@ export default {
     name: 'home',
 
     created () {
-
-        this.requestHash();
-
+        if ( !this.hash ) {
+            this.requestHash();
+        }
     },
 
     data: () => ( {
