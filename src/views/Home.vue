@@ -1,14 +1,15 @@
 <template>
-    <div class='home'>
-        <p>
+    <md-content>
+        <h1 class="md-display-3">
             {{ hash }}
-        </p>
+        </h1>
         <p>
-            <button
-                :disabled='requestInProgress'
-                @click='requestHash'>Request hash</button>
+            <md-button
+                class="md-primary"
+                :disabled="requestInProgress"
+                @click="requestHash">Request hash</md-button>
         </p>
-    </div>
+    </md-content>
 </template>
 
 <script>

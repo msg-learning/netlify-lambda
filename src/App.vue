@@ -1,29 +1,43 @@
 <template>
-    <div id='app'>
-        <div id='nav'>
-            <router-link to='/'>Random Hash</router-link> |
-            <router-link to='/hash-value'>Hash a value</router-link>
-        </div>
-        <router-view/>
+    <div class="page-container" id="app">
+        <md-app>
+
+            <md-app-toolbar
+                class="md-transparent md-dense"
+                md-elevation="0">
+                <div class="md-toolbar-row">
+                    <div class="md-toolbar-section-end">
+                        <md-button to="/">Random Hash</md-button>
+                        <md-button to="/hash-value">Hash a value</md-button>
+                    </div>
+                </div>
+            </md-app-toolbar>
+
+            <md-app-content class="app-content">
+                <router-view/>
+            </md-app-content>
+
+        </md-app>
     </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<style lang="scss" scoped>
+
+    #app {
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        height: 100vh;
     }
-  }
-}
+
+    .md-app {
+        height: 100vh;
+    }
+
+    .router-link-exact-active {
+        border-bottom: 1px solid black;
+    }
+
 </style>
