@@ -16,7 +16,7 @@ module.exports = {
       { exceptions: [ 'empty' ] }
     ],
     semi: [ 'error', 'always' ],
-    'padded-blocks': [ 'error', 'always' ],
+    'padded-blocks': 'off',
     'indent': [ 'error', 4 ],
     'vue/html-indent': [
       'error',
