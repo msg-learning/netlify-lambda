@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
+import Hash from '@/views/Hash';
 
 Vue.use( Router );
 
@@ -12,6 +13,11 @@ export default new Router( {
             path: '/',
             name: 'home',
             component: Home
+        },
+        {
+            path: '/hash/:value',
+            name: 'hash',
+            component: Hash
         },
         {
             path: '/hash-value',
