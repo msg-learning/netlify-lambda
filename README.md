@@ -1,5 +1,9 @@
 # netlify-lambda
 
+## Live version
+
+[live version of this repo](https://netlify.miguelsanchezgonzalez.com)
+
 ## Project setup
 ```
 npm install
