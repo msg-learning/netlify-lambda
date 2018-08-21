@@ -6,9 +6,8 @@
   "author": {
     "name": "Miguel Sanchez Gonzalez",
     "email": "miguelsanychez@gmail.com",
-    "url": "https://miguelsanchezgonzalez.com"  
+    "url": "https://miguelsanchezgonzalez.com"
   },
-
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -35,6 +34,7 @@
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue-cli-plugin-netlify-lambda": "^0.1.0",
+    "vue-gtm": "^1.0.3",
     "vue-template-compiler": "^2.5.16"
   },
   "gitHooks": {
