@@ -2,6 +2,9 @@ import { createHash } from 'crypto';
 
 export function handler ( event, context, callback ) {
 
+    console.log( JSON.stringify( event, null, 4 ) );
+    console.log( JSON.stringify( context, null, 4 ) );
+
     const value = event.queryStringParameters.value;
     const base = '' + Date.now() + '' + Math.random();
 
