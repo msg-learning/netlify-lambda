@@ -43,5 +43,13 @@ function hash ( value ) {
 const logEvent = event => {
     const ip = event.headers[ 'client-ip' ];
     const country = event.headers[ 'x-country' ];
-    console.info( `Hashing "${ event.queryStringParameters.value }" for ${ ip } (${ country } )` );
+    const value = event.queryStringParameters.value;
+
+    let logHeader = 'Random hash';
+
+    if ( value ) {
+        logHeader = `Hashing "${ value }"`;
+    }
+
+    console.info( `${logHeader} for ${ ip } (${ country })` );
 };
